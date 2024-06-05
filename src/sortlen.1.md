@@ -16,7 +16,7 @@ sortlen - sort lines by length
 **sortlen** [OPTIONS]
 
 # DESCRIPTION
-The **sortlen** command sorts lines of text based on their length.
+The **sortlen** command sorts lines of text based on their length.  It reads from stdin and outputs to stdout, unless the line falls outside the specified filters, in which case the line goes to stderr.  Options may affect this behavior.  See below.
 
 # OPTIONS
 **-r**
@@ -25,11 +25,16 @@ The **sortlen** command sorts lines of text based on their length.
 **-m** *min_chars*
 :   Set a minimum character limit for lines. Lines shorter than *min_chars* will be output to stderr.
 
+**-x** *max_chars*
+:   Set a maximum character limit for lines. Lines longer than *max_chars* will be output to stderr.
+
+**-q**
+:   Suppress stderr output for `-m` and `-x` options.
+
 **-d**
 :   Ignore leading directories in each line, only considering the base filename when determining length, but outputting the entire original line.
 
-**-x** *max_chars*
-:   Set a maximum character limit for lines. Lines longer than *max_chars* will be output to stderr.
+## Documentation options
 
 **-h, --help**
 :   Display this help message and exit.
@@ -39,11 +44,6 @@ The **sortlen** command sorts lines of text based on their length.
 
 **--man**
 :   Output the manpage as markdown and exit.
-
-**-q**
-:   Suppress stderr output for `-m` and `-x` options.
-
-
 
 # EXAMPLES
 
@@ -98,5 +98,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 # Notes
 
 This utility has been written by Evan Edwards repeatedly over the decades.  This particular version was created to test ChatGPT in June 2024.  It did... okay.
-
 

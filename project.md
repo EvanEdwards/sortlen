@@ -5,7 +5,7 @@ domain: sortlen
 type: code
 author: Evan Edwards
 category: uncategorized
-version: 0.0.1
+version: 0.0.2
 ---
 
 
