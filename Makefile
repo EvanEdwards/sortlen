@@ -19,3 +19,7 @@ release: clean
 	sed -n '/^[[:space:]]*$$/,$$p' <src/sortlen.1.md |sed 's/^#/##/' >>README.md
 	cat README.md |cat -s |sponge README.md
 
+install: bin/sortlen
+	mkdir -p "$$HOME/.local/bin"
+	cp -p bin/sortlen "$$HOME/.local/bin/."
+	echo "Installation complete.  End of line."
