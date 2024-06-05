@@ -5,12 +5,15 @@ domain: sortlen
 type: code
 author: Evan Edwards
 category: uncategorized
+version: 0.0.1
 ---
-
-
 
 # sortlen
 
-  Sort lines by length
+## Version {{version}}
 
+A simple c utility that sorts lines by length.
 
+Fully documented with a manpage (see below).
+
+By Evan Edwards, released under MIT License.
