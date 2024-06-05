@@ -22,4 +22,8 @@ release: clean
 install: bin/sortlen
 	mkdir -p "$$HOME/.local/bin"
 	cp -p bin/sortlen "$$HOME/.local/bin/."
+	echo "sortlen moved to .local/bin in your home directory."
+	echo "Attempting man page install.  If you don't have pandoc, this will fail."
+	mkdir -p "$$HOME/.local/share/man/man1" 
+	bin/sortlen --man |pandoc - -s -t man >"$$HOME/.local/share/man/man1/sortlen.1"
 	echo "Installation complete.  End of line."

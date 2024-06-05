@@ -5,7 +5,7 @@ domain: sortlen
 type: code
 author: Evan Edwards
 category: uncategorized
-version: 0.0.2
+version: 0.0.3
 ---
 
 
@@ -15,8 +15,15 @@ version: 0.0.2
 
 ## Version {{version}}
 
-A simple c utility that sorts lines by length.
+A simple c utility that sorts lines by length.  Fully documented with a manpage.
 
-Fully documented with a manpage (see below).
+# Installation
 
-By Evan Edwards, released under MIT License.
+Clone or download the repo (hey, I'm not judging), and simply run `make install`
+
+To create the man page you'll need pandoc, as the source is markdown.  The Makefile will ignorantly assume you have it and try to install.  Failure means that the man page won't be present, but -- assuming you have gcc -- you should still have the sortlen binary in your `$HOME/.local/bin`
+
+If you don't want it there, move it elsewhere.  Or just run `make` and move `sortlen` where you want to from the bin directory, reading in `sortlen --man` how to manually install the man page.
+
+
+
