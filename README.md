@@ -1,4 +1,6 @@
 
+![Header Image, a stack of paper and a title reading "sortlen, a simple cli utility"](hero.svg)
+
 # sortlen
 
 ## Version  0.0.1
